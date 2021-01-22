@@ -1,0 +1,4 @@
+kotlin/com/ruthlessjailer/plugin/devincsapplication/Config.kt
+# Project exclude paths
+/.gradle/
+/build/
