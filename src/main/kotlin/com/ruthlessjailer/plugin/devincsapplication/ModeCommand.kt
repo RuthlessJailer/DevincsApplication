@@ -3,6 +3,7 @@ package com.ruthlessjailer.plugin.devincsapplication
 import com.ruthlessjailer.api.poseidon.command.CommandBase
 import com.ruthlessjailer.api.poseidon.command.SubCommand
 import com.ruthlessjailer.api.poseidon.command.SuperiorCommand
+import com.ruthlessjailer.api.poseidon.task.manager.TaskManager
 import com.ruthlessjailer.plugin.devincsapplication.PlayerCache.Companion.getCache
 import org.bukkit.command.CommandSender
 
@@ -23,8 +24,12 @@ object ModeCommand : CommandBase("mode"), SuperiorCommand {
 	 * Tell the player to run the help command.
 	 */
 	override fun onExecute(sender: CommandSender, args: Array<out String>, commandLabel: String) {
-		if (args.isNotEmpty()) return
+		if (args.isNotEmpty()) return//don't run if they have run a sub-command
 		send(sender, "&4Run &b/mode help &4for a list of modes!")
+
+		TaskManager.async.later {
+			DevincsApplication.savePlayerLocations()
+		}
 	}
 
 	/**

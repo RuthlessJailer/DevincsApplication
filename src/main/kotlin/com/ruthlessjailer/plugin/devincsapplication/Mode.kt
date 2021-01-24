@@ -6,7 +6,7 @@ package com.ruthlessjailer.plugin.devincsapplication
 enum class Mode {
 
 	/**
-	 *
+	 * Changes the block 5 to the left of where the player is facing for 10 seconds.
 	 */
 	BLOCK,
 

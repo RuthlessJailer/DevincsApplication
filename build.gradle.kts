@@ -43,6 +43,7 @@ dependencies {
 //	api(group = "com.nesaak", name = "NoReflection", version = "0.1-SNAPSHOT")
 	api(group = "com.ruthlessjailer.api.theseus", name = "Theseus", version = "1.2.4")
 	api(group = "com.ruthlessjailer.api.poseidon", name = "Poseidon", version = "1.0.0")
+	api("jakarta.xml.bind:jakarta.xml.bind-api:2.3.2")
 //	api(group = "com.google.code.gson", name = "gson", version = "2.3.1")//1.8.8 released july 27 2015, latest release of gson before then is 2.3.1
 	compileOnly("org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT")
 	compileOnly("org.spigotmc:spigot:1.16.5-R0.1-SNAPSHOT")
